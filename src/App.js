@@ -14,6 +14,12 @@ class App extends Component {
     })
   };
 
+  removeParameter = () => {
+    this.setState({
+      todos: []
+    })
+  }
+
   render() {
     return (
       <div>
@@ -22,6 +28,7 @@ class App extends Component {
           <ToDoListItem todo={x} />
         ))}
         <button onClick={this.addParameter}> Add todo</button>
+        <button onClick={this.removeParameter}> Remove all todos</button>
       </div>
     );
   }
